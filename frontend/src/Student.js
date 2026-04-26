@@ -7,7 +7,7 @@ function Student() {
   const [studentData, setStudentData] = useState({
     name: '',
     rollNo: '',
-    class: '',
+    class_name: '',
   });
   const [data, setData]= useState([])
 
@@ -38,7 +38,7 @@ const getData=()=> {
     setStudentData({
       name: '',
       rollNo: '',
-      class: '',
+      class_name: '',
     });
     const requestOptions = {
       method: 'POST',
@@ -92,8 +92,8 @@ getData()})
             <label>Class:</label>
             <input
               type="text"
-              name="class"
-              value={studentData.class}
+              name="class_name"
+              value={studentData.class_name}
               onChange={handleInputChange}
             />
           </div>
@@ -122,7 +122,7 @@ getData()})
               <td style={{ border: '1px solid #ccc', padding: '8px', textAlign: 'center' }}>{d.id}</td>
               <td style={{ border: '1px solid #ccc', padding: '8px', textAlign: 'center' }}>{d.name}</td>
               <td style={{ border: '1px solid #ccc', padding: '8px', textAlign: 'center' }}>{d.roll_number}</td>
-              <td style={{ border: '1px solid #ccc', padding: '8px', textAlign: 'center' }}>{d.class}</td>
+              <td style={{ border: '1px solid #ccc', padding: '8px', textAlign: 'center' }}>{d.class_name}</td>
               <td style={{ border: '1px solid #ccc', padding: '8px', textAlign: 'center' }}>
         <button className="delete-button" onClick={() => handleDelete(d.id)}>Delete</button>
       </td>
