@@ -7,7 +7,7 @@ function Teacher() {
   const [TeacherData, setTeacherData] = useState({
     name: '',
     subject: '',
-    class: ''
+    "class_name": ''
   });
 
   const [data, setData] = useState([])
@@ -35,7 +35,7 @@ function Teacher() {
     setTeacherData({
       name: '',
       subject: '',
-      class: '',
+      class_name: '',
     });
 
 
@@ -93,8 +93,8 @@ function Teacher() {
             <label>Class:</label>
             <input
               type="text"
-              name="class"
-              value={TeacherData.class}
+              name="class_name"
+              value={TeacherData.class_name}
               onChange={handleInputChange}
             />
           </div>
@@ -123,7 +123,7 @@ function Teacher() {
                 <td style={{ border: '1px solid #ccc', padding: '15px', textAlign: 'center' }}>{d.id}</td>
                 <td style={{ border: '1px solid #ccc', padding: '15px', textAlign: 'center' }}>{d.name}</td>
                 <td style={{ border: '1px solid #ccc', padding: '15px', textAlign: 'center' }}>{d.subject}</td>
-                <td style={{ border: '1px solid #ccc', padding: '15px', textAlign: 'center' }}>{d.class}</td>
+                <td style={{ border: '1px solid #ccc', padding: '15px', textAlign: 'center' }}>{d.class_name}</td>
                 <td style={{ border: '1px solid #ccc', padding: '15px', textAlign: 'center' }}>
                   <button className="delete-button" onClick={() => handleDelete(d.id)}>Delete</button>
                 </td>
