@@ -161,6 +161,8 @@ app.delete('/teacher/:id', async (req, res) => {
     }
 });
 
-app.listen(3500, () => {
-    console.log("listening on Port 3500");
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
 });
